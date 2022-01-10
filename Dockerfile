@@ -46,7 +46,7 @@ RUN a2enmod rewrite
 # Set working directory
 WORKDIR /var/www/html
 
-RUN git clone --branch=master https://github.com/renissonveras/tikiri /var/www/html
+RUN git clone --branch=master https://github.com/marcelofmatos/tikiri /var/www/html
 
 RUN cp /var/www/html/code/example.env /var/www/html/code/.env
 
