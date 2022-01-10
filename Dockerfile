@@ -1,11 +1,8 @@
-# FROM php:5.6-fpm
 FROM php:5.6-apache
-# FROM php:7.4-fpm
 
 ENV user=tikiri \
     uid=1000
 
-# Arguments defined in docker-compose.yml
 ARG user
 ARG uid
 
