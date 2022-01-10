@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  www:
+    image: marcelofmatos/tikiri:latest
+    #build: .
+
+  database:
+    image: mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=tikiri
+      - MYSQL_USER=tikiri
+      - MYSQL_PASSWORD=tikiri
+      - MYSQL_DATABASE=tikiri
+    volumes:
+      - mariadb-data:/var/lib/mysql
+
+
+volumes:
+  mariadb-data:
+    driver: local
